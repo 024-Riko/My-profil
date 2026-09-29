@@ -15,7 +15,7 @@
 **Teknologi:** HTML, CSS, JavaScript
 
 ### 📌 [Video P1]
-> [Lihat Video P1].().
+> [Lihat Video P1].(ISI_LINK_VIDEO_P1_DI_SINI).
 
 **Teknologi:** Python, MySQL
 
