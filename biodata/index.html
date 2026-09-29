@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Riko Adi Setiawan | My Profile</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -41,6 +39,10 @@
             background: #0b0a13;
 
             border-bottom: 1px solid #1c1929;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
@@ -60,12 +62,12 @@
             color: #aaa8b7;
             text-decoration: none;
             font-size: 12px;
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
             color: #a66cff;
         }
-
 
         /* ================= HERO ================= */
 
@@ -86,7 +88,6 @@
                 #090811;
         }
 
-
         /* ================= KIRI ================= */
 
         .hero-left {
@@ -99,44 +100,31 @@
 
         .command {
             color: #59e879;
-
             font-family: monospace;
-
             font-size: 13px;
-
             margin-bottom: 20px;
         }
 
         .hero-left h1 {
             font-size: 48px;
-
             line-height: 1.1;
-
             margin-bottom: 20px;
-
             color: #ffffff;
         }
 
         .hero-left h2 {
             font-size: 17px;
-
             color: #a87aff;
-
             margin-bottom: 18px;
         }
 
         .hero-left p {
             max-width: 550px;
-
             color: #a5a3b0;
-
             font-size: 12px;
-
             line-height: 1.8;
-
             margin-bottom: 25px;
         }
-
 
         /* ================= BUTTON ================= */
 
@@ -157,6 +145,8 @@
             font-size: 12px;
 
             font-weight: bold;
+
+            transition: 0.3s;
         }
 
         .btn-primary {
@@ -172,6 +162,10 @@
                 0 5px 20px rgba(125, 60, 255, 0.3);
         }
 
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
         .btn-secondary {
             color: white;
 
@@ -182,8 +176,8 @@
 
         .btn-secondary:hover {
             background: #18122c;
+            transform: translateY(-3px);
         }
-
 
         /* ================= KANAN ================= */
 
@@ -196,7 +190,6 @@
 
             padding: 30px;
         }
-
 
         /* ================= PROFILE CARD ================= */
 
@@ -216,45 +209,38 @@
             border: 1px solid #211c39;
 
             box-shadow:
-                0 20px 60px rgba(0,0,0,0.4);
+                0 20px 60px rgba(0, 0, 0, 0.4);
         }
 
-
-        /* ================= LINGKARAN A ================= */
+        /* ================= FOTO PROFIL ================= */
 
         .avatar {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
 
             margin: 0 auto 25px;
 
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
             border-radius: 50%;
 
-            background: linear-gradient(
-                135deg,
-                #a64cff,
-                #315be8
-            );
+            overflow: hidden;
 
-            border: 2px solid #a478ff;
+            border: 3px solid #a478ff;
 
             box-shadow:
-                0 0 35px rgba(126, 68, 255, 0.5);
-
-            color: white;
-
-            font-size: 50px;
-
-            font-weight: bold;
+                0 0 20px rgba(126, 68, 255, 0.5),
+                0 0 45px rgba(126, 68, 255, 0.25);
         }
 
+        .avatar img {
+            width: 100%;
+            height: 100%;
 
-        /* ================= CODE ================= */
+            object-fit: cover;
+
+            display: block;
+        }
+
+        /* ================= CODE CARD ================= */
 
         .code-card {
             width: 100%;
@@ -282,13 +268,14 @@
             color: #6cff83;
         }
 
-
         /* ================= BAGIAN BAWAH ================= */
 
         .content {
             padding: 80px 8%;
 
             background: #0b0a13;
+
+            border-top: 1px solid #161323;
         }
 
         .content h2 {
@@ -303,6 +290,12 @@
             color: #a66cff;
         }
 
+        .content > p {
+            color: #9997a7;
+            font-size: 13px;
+            line-height: 1.8;
+            max-width: 700px;
+        }
 
         /* ================= CARD ================= */
 
@@ -325,6 +318,17 @@
             border: 1px solid #211d36;
 
             border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            border-color: #6339c7;
+
+            box-shadow:
+                0 10px 30px rgba(103, 53, 232, 0.12);
         }
 
         .card h3 {
@@ -341,6 +345,63 @@
             line-height: 1.7;
         }
 
+        /* ================= IDENTITAS ================= */
+
+        .identity {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+
+            max-width: 800px;
+
+            margin-top: 30px;
+        }
+
+        .identity-item {
+            padding: 18px;
+
+            background: #11101d;
+
+            border: 1px solid #211d36;
+
+            border-radius: 8px;
+        }
+
+        .identity-item strong {
+            display: block;
+
+            color: #a66cff;
+
+            font-size: 12px;
+
+            margin-bottom: 7px;
+        }
+
+        .identity-item span {
+            color: #ddd;
+
+            font-size: 13px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #07070b;
+
+            color: #777;
+
+            font-size: 12px;
+        }
+
+        footer span {
+            color: #a66cff;
+        }
 
         /* ================= RESPONSIVE ================= */
 
@@ -383,6 +444,10 @@
                 margin-right: auto;
             }
 
+            .hero-left h1 {
+                font-size: 40px;
+            }
+
             .hero-right {
                 padding-top: 40px;
             }
@@ -390,31 +455,47 @@
             .cards {
                 grid-template-columns: 1fr;
             }
-        }
 
+            .identity {
+                grid-template-columns: 1fr;
+            }
+        }
 
         @media (max-width: 500px) {
 
             .hero-left h1 {
-                font-size: 38px;
+                font-size: 34px;
             }
 
             .profile-card {
                 width: 280px;
             }
 
+            .avatar {
+                width: 130px;
+                height: 130px;
+            }
+
             nav ul li a {
                 font-size: 11px;
             }
+
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                text-align: center;
+            }
         }
-
     </style>
-</head>
 
+</head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
 
@@ -423,6 +504,7 @@
         </div>
 
         <ul>
+
             <li>
                 <a href="#tentang">Tentang</a>
             </li>
@@ -442,12 +524,13 @@
             <li>
                 <a href="#identitas">Identitas</a>
             </li>
+
         </ul>
 
     </nav>
 
 
-    <!-- HERO -->
+    <!-- ================= HERO ================= -->
 
     <section class="hero">
 
@@ -501,13 +584,24 @@
 
             <div class="profile-card">
 
+                <!-- FOTO PROFIL -->
+
                 <div class="avatar">
-                    R
+
+                    <img
+                        src="foto.jpg"
+                        alt="Foto Profil Riko Adi Setiawan"
+                    >
+
                 </div>
+
+
+                <!-- CODE CARD -->
 
                 <div class="code-card">
 
                     <div>
+
                         <span class="purple">
                             const
                         </span>
@@ -517,9 +611,12 @@
                         <span class="green">
                             "Riko Adi Setiawan"
                         </span>;
+
                     </div>
 
+
                     <div>
+
                         <span class="purple">
                             const
                         </span>
@@ -529,9 +626,12 @@
                         <span class="green">
                             "Informatika"
                         </span>;
+
                     </div>
 
+
                     <div>
+
                         <span class="purple">
                             const
                         </span>
@@ -541,6 +641,7 @@
                         <span class="green">
                             "Pamekasan"
                         </span>;
+
                     </div>
 
                 </div>
@@ -552,7 +653,7 @@
     </section>
 
 
-    <!-- TENTANG -->
+    <!-- ================= TENTANG ================= -->
 
     <section
         class="content"
@@ -566,13 +667,14 @@
         <p>
             Saya adalah Riko Adi Setiawan, seorang pelajar
             yang tertarik dengan dunia teknologi dan
-            pemrograman.
+            pemrograman. Saya senang mempelajari hal-hal
+            baru yang berkaitan dengan website dan teknologi.
         </p>
 
     </section>
 
 
-    <!-- SKILLS -->
+    <!-- ================= SKILLS ================= -->
 
     <section
         class="content"
@@ -586,25 +688,42 @@
         <div class="cards">
 
             <div class="card">
-                <h3>HTML</h3>
+
+                <h3>
+                    HTML
+                </h3>
+
                 <p>
                     Membuat struktur website menggunakan HTML.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>CSS</h3>
+
+                <h3>
+                    CSS
+                </h3>
+
                 <p>
                     Membuat tampilan website menjadi modern
                     dan responsif.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>JavaScript</h3>
+
+                <h3>
+                    JavaScript
+                </h3>
+
                 <p>
                     Membuat website lebih interaktif.
                 </p>
+
             </div>
 
         </div>
@@ -612,7 +731,7 @@
     </section>
 
 
-    <!-- PROJECT -->
+    <!-- ================= PROJECT ================= -->
 
     <section
         class="content"
@@ -626,30 +745,173 @@
         <div class="cards">
 
             <div class="card">
-                <h3>Portfolio Website</h3>
+
+                <h3>
+                    Portfolio Website
+                </h3>
+
                 <p>
                     Website portfolio pribadi menggunakan
                     HTML dan CSS.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Website Biodata</h3>
+
+                <h3>
+                    Website Biodata
+                </h3>
+
                 <p>
                     Website biodata pribadi.
                 </p>
+
             </div>
 
+
             <div class="card">
-                <h3>Project Lainnya</h3>
+
+                <h3>
+                    Project Lainnya
+                </h3>
+
                 <p>
                     Project pemrograman lainnya.
                 </p>
+
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- ================= PENDIDIKAN ================= -->
+
+    <section
+        class="content"
+        id="pendidikan"
+    >
+
+        <h2>
+            <span>Pendidikan</span>
+        </h2>
+
+        <div class="identity">
+
+            <div class="identity-item">
+
+                <strong>
+                    Pendidikan
+                </strong>
+
+                <span>
+                    Teknik Informatika
+                </span>
+
+            </div>
+
+
+            <div class="identity-item">
+
+                <strong>
+                    Status
+                </strong>
+
+                <span>
+                    Pelajar / Mahasiswa
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= IDENTITAS ================= -->
+
+    <section
+        class="content"
+        id="identitas"
+    >
+
+        <h2>
+            <span>Identitas</span>
+        </h2>
+
+        <div class="identity">
+
+            <div class="identity-item">
+
+                <strong>
+                    Nama
+                </strong>
+
+                <span>
+                    Riko Adi Setiawan
+                </span>
+
+            </div>
+
+
+            <div class="identity-item">
+
+                <strong>
+                    Jurusan
+                </strong>
+
+                <span>
+                    Informatika
+                </span>
+
+            </div>
+
+
+            <div class="identity-item">
+
+                <strong>
+                    Lokasi
+                </strong>
+
+                <span>
+                    Pamekasan
+                </span>
+
+            </div>
+
+
+            <div class="identity-item">
+
+                <strong>
+                    Minat
+                </strong>
+
+                <span>
+                    Web Development & Programming
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026
+        <span>
+            Riko Adi Setiawan
+        </span>
+        — My Personal Portfolio
+
+    </footer>
+
 </body>
+
 </html>
