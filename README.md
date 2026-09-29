@@ -10,7 +10,7 @@
 ## 🚀 Proyek Saya
 
 ### 📌 [Biodata Lengkap]
-> [Lihat Biodata Lengkap].(https://github.com/024-Riko/My-profil/tree/main).
+> [Lihat Biodata Lengkap].(https://024-riko.github.io/My-profil/biodata).
 
 **Teknologi:** HTML, CSS, JavaScript
 
