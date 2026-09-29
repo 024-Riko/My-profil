@@ -5,6 +5,22 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=500&lines=Hello%2C+I'm+[Nama+Kamu];Welcome+to+my+GitHub+Profile!;I'm+a+[Profesi%2FStatus]" alt="Typing SVG" />
 </p>
 
+---
+
+## 🚀 Proyek Saya
+
+### 📌 [Biodata Lengkap]
+> [Lihat Biodata Lengkap].().
+
+**Teknologi:** HTML, CSS, JavaScript
+
+### 📌 [Video P1]
+> [Lihat Video P1].().
+
+**Teknologi:** Python, MySQL
+
+---
+
 ## 👨‍💻 Tentang Saya
 
 - 👤 Nama: **[Riko]**
