@@ -2,7 +2,7 @@
 # 👋 Halo, saya [Riko Adi Setiawan]!
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=500&lines=Hello%2C+I'm+[Nama+Kamu];Welcome+to+my+GitHub+Profile!;I'm+a+[Profesi%2FStatus]" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=36BCF7&center=true&vCenter=true&width=600&lines=Hello%2C+I'm+RIKO+ADI+SETIAWAN;Welcome+to+my+GitHub+Profile!;PENGELOLA+SISTEM+DAN+KEAMANAN+DATA" alt="Typing SVG" />
 </p>
 
 ---
